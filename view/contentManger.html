@@ -1,0 +1,51 @@
+
+<div class="row" ng-controller="contentControl">
+    <div class="row">
+        <div ng-click="addArticle('addArticle')" class="btn btn-link col-lg-2 col-sm-2 col-md-2 col-xs-2 col-lg-push-8 col-sm-push-8 col-md-push-8 col-xs-push-8">新建文章</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1 "></div>
+        <div class="col-lg-10 col-sm-10 col-md-10 col-xs-10 ">
+            <table class="table-responsive"  >
+                <caption> </caption>
+                <tr class="btn-primary">
+                    <th class="col-lg-5 col-sm-5 col-md-5 col-xs-5 text-center">标题</th>
+                    <th class="col-lg-2 col-sm-2 col-md-2 col-xs-2 text-center">作者</th>
+                    <th class="col-lg-2 col-sm-2 col-md-2 col-xs-2 text-center">发布时间</th>
+                    <th class="col-lg-2 col-sm-2 col-md-2 col-xs-2 text-center">操作</th>
+                </tr>
+                <tr ng-repeat="item in articles"  >
+
+                    <td  class="text-center"><div  style="word-wrap:break-word;"  class="   btn-link" ng-click="showArticle('showArticle',item.title)">{{item.title}}</div></td>
+
+                    <td  class="text-center">{{item.author}}</td>
+                    <td  class="text-center"> {{item.ditTime}}</td>
+
+                    <td  class="text-center btn-group-xs">
+                        <div class="btn btn-link " ng-click="remove($index)">删除</div>
+
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1 "></div>
+    </div>
+    <div class="row">
+        <nav style="text-align: center">
+            <ul class="pagination">
+                <li>
+                    <a  aria-label="Previous">
+                        <span aria-hidden="true">&laquo;上一页</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a   aria-label="Next">
+                        <span aria-hidden="true">下一页 &raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+

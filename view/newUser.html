@@ -1,0 +1,27 @@
+<div class="row" style="margin-top: 2em;">
+    <div  class="col-lg-8 col-sm-8 col-md-8 col-xs-8 col-lg-push-2 col-md-push-2 col-sm-push-2 col-xs-push-2 text-center">
+        <form novalidate name="formName">
+            <div class="row">
+                姓名: <input ng-model="user.name" name="userName" type="text" required><br/>
+                <div ng-show="formName.userName.$dirty&&formName.userName.$invalid">
+                    <span></span>
+                </div>
+            </div>
+
+
+            <div class="row">
+            邮箱: <input ng-model="user.email" name="userEmail" type="email" required><br/>
+            </div>
+                <div class="row">
+            账号: <input ng-model="user.account" name="userName" type="text" required><br/>
+                </div>
+                    <div class="row">
+            电话: <input ng-model="user.tel" name="userName" type="text" required><br/>
+                    </div>
+                        <div class="row">
+            <div class="btn btn-default"  ng-click="addUser(user)" >提交</div>
+                        </div>
+        </form>
+    </div>
+
+</div>
